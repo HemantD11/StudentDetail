@@ -1,15 +1,14 @@
-import axios from 'axios';
 import React,{useEffect,useState} from 'react'
 
 const Student = () => {
-    const [std, setstd]=useState()
+    const [std, setstd]=useState([])
     useEffect(() => {
-        axios.get('https://cms.analyttica.com/testimonials').then(data=>setstd(data.data))
-    }, []);
+       fetch('https://cms.analyttica.com/testimonials').then(res=>res.json()).then(data=>setstd(data))
+    },[]);
   return (
     <div className="container my-5">
         <div className="row">
-            {std!=null?std.map((el)=>{
+            {std.map((el)=>{
                 return <div className='col col-sm-4 my-5' key={el.id} >
                     <div className="card shadow border-primary" style={{height:'300px'}}>
                         <div className='text-center'>
@@ -21,7 +20,7 @@ const Student = () => {
                         </div>
                     </div>
                 </div>
-            }):''}
+            })}
         </div>
     </div>
   )

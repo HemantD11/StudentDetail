@@ -1,0 +1,14 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: rgb(255, 166, 0);
+}
+h1::first-letter{
+    font-size:45px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbarr:hover h1::first-letter{
+    color:rgb(255, 166, 0);
+}

@@ -1,0 +1,9 @@
+.heart{
+    position: absolute;
+    left: 5px;
+    /* color: white; */
+    text-shadow:0 0 3px black;
+}
+.heart:hover{
+    cursor: pointer;
+}
